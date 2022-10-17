@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    int A = 9;
+    
+    for(A = 0; A <=3; A++){
+        printf("%d", A);
+    }
+
+    return 0;
+}
