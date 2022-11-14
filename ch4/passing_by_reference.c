@@ -8,24 +8,18 @@ Code, Compile, Run and Debug online from anywhere in world.
 *******************************************************************************/
 #include <stdio.h>
 
+void increment(int* a){
+    *a = *a + 1;
+    printf("Address of increment variable a in memory: %p \n", a);
+}
+
 int main()
 {
-    
     int a;
-    int *p;
-    
-    p = &a; // p is assigned the address of address
-    
-    a = 5; 
-    
-    printf("Location of pointer p : %p \n", p);
-    printf("location of variable a : %p \n", &a);
-    printf("Location of pointer p : %p \n", &p);
-    printf("Value of the address p is pointing to %d \n", *p);
-    
-    *p = 8;
-    printf("value of variable a : %d \n", a);
-    
+    a = 10;
+    printf("Address of main variable a in memory: %p \n", &a);
+    increment(&a);
+    printf("value of a %d \n", a);
 
     return 0;
 }

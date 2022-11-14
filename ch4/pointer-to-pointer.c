@@ -10,22 +10,25 @@ Code, Compile, Run and Debug online from anywhere in world.
 
 int main()
 {
+    int x = 5;
     
-    int a;
-    int *p;
+    int *p = &x;
+    *p = 6;
     
-    p = &a; // p is assigned the address of address
-    
-    a = 5; 
-    
-    printf("Location of pointer p : %p \n", p);
-    printf("location of variable a : %p \n", &a);
-    printf("Location of pointer p : %p \n", &p);
-    printf("Value of the address p is pointing to %d \n", *p);
-    
-    *p = 8;
-    printf("value of variable a : %d \n", a);
-    
+    int **q = &p;
+    int ***r = &q;
 
+    printf("value at address stored in p : %d \n", *p);
+    printf("Address stored in p: %p \n", p);
+    printf("value at address stored in q : %p \n", *q);
+    printf("value at address in q: %d \n", *(*q));
+    printf("value at address in r: %d \n", *(*(*r)));
+    
+    ***r = 10;
+    printf("value of x : %d \n", x);
+    
+    **q = *p + 2;
+    printf("value of x : %d \n", x);
+    
     return 0;
 }
