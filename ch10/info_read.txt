@@ -1,0 +1,3 @@
+Hello world!!!!
+this is CSE1310
+Welcome to file handling

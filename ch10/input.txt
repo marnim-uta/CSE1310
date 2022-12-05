@@ -1,0 +1,2 @@
+output.txt
+3 2 60
